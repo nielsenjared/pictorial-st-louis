@@ -10,18 +10,12 @@ Mobile-friendly, interactive map created using:
 ## Check it
 http://jarednielsen.com/pictorial-st-louis/index.html
 
+---
 
-Notes:
-|   Dim(s)  |   Image   |   Pixels  |
-|   -----   |   --- |   ----    |
-|   Max W:  |   021 |   6064    |
-|   Max H:  |   053 |   4208    |
-|   Min W:  |   055 |   5632    | 
-|   Min H:  |   015 |   3856    |
-
-| Tables        | Are           | Cool  |
+| Dim(s)     | Image           | Pixels  |
 | ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| Max W:      | 021   | 6064 |
+| Max H:      | 053   | 4208 |
+| Min W:      | 055   | 5632 |
+| Min H:      | 015   | 3856 |
  

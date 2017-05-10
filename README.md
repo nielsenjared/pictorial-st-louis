@@ -1,4 +1,4 @@
-#Pictorial St. Louis
+# Pictorial St. Louis
 
 Mobile-friendly, interactive map created using:
 
@@ -7,7 +7,7 @@ Mobile-friendly, interactive map created using:
 * leaflet-rastercoords (https://commenthol.github.io/leaflet-rastercoords/)
 * gdal2tiles-leaflet (https://github.com/commenthol/gdal2tiles-leaflet)
 
-##Check it
+## Check it
 http://jarednielsen.com/pictorial-st-louis/index.html
 
 
@@ -17,5 +17,11 @@ Notes:
 |   Max W:  |   021 |   6064    |
 |   Max H:  |   053 |   4208    |
 |   Min W:  |   055 |   5632    | 
-|   Min H:  |   015 |   3856    | 
+|   Min H:  |   015 |   3856    |
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
  

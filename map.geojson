@@ -1,0 +1,53 @@
+{"type":"FeatureCollection", "features":[
+  {"type":"Feature","properties":
+    {"id":1,
+    "chapter":"The Great Metropolis of the Mississippi Valley",
+    "zoom":3,
+    "image":"img/pictorial-st-louis.png",
+    "source-credit":"Source: Panoramic Maps of Cities in the United States and Canada",
+    "source-link":"http://www.worldcat.org/oclc/8953194",
+    "description":"A popular cartographic form used to depict U.S. and Canadian cities and towns during the late nineteenth and early twentieth centuries was the panoramic map. Known also as bird's-eye views, perspective maps, panoramas, and aero views, panoramic maps are nonphotographic representations of cities, portrayed as if viewed from above at an oblique angle. Although not generally drawn to scale, they show street patterns, individual buildings, and major landscape features in perspective. (Hebert & Dempsey)"},
+    "geometry":{"type":"Point","coordinates":[32000,10137]}},
+  {"type":"Feature","properties":
+    {"id":2,"chapter":"A Topographical Survey Drawin in Perspective A.D. 1875 by Camille N. Dry",
+    "zoom":8,
+    "image":"img/pictorial-st-louis-dry-camille-1885.png",
+    "source-credit":"Source: Keen Delage via Flickr",
+    "source-link":"https://www.flickr.com/photos/73762611@N00/5992654457",
+    "description":"There can be little doubt that the C. Drie whose name appears on lithographs of Vicksburg, Mississippi, and Galveston, Texas, dated 1871 and on a handful of views of other southern cities dated the next year is the Camille N. Dry who drew the most ambitious of all American city views. This is the 110-sheet view of St. Louis, Missouri, published by Compton & Co. in 1875. Perhaps this heroic task exhausted the artist, for subsequently his name--now signed C. N. Dry--appears only on a 1903 print showing Anniston, Alabama, and a view of the business district of Birmingham, Alabama, published by Dry the following year. (Reps) Dry lived here in St. Louis while working on this project."},
+    "geometry":{"type":"Point","coordinates":[41500,13650]}},
+  {"type":"Feature","properties":
+    {"id":3,"chapter":"This guy.",
+    "zoom":6,
+    "image":"https://farm6.staticflickr.com/5693/20860554099_1a9466a11e_c.jpg",
+    "source-credit":"Source: Carlos Velazquez/Flickr",
+    "source-link":"https://flic.kr/p/xMnMXR",
+    "description":"Images can be uploaded a local subfolder, or pulled from an external URL (such as this photo on a Flickr server). They are automatically resized to fit into the storymap."},
+    "geometry":{"type":"Point","coordinates":[3250,1350]}},
+  {"type":"Feature","properties":
+    {"id":4,"chapter":"Terra Incognita",
+    "zoom":6,
+    "image":"img/BradleyAirport.jpg",
+    "source-credit":"Source: public domain/Wikimedia",
+    "source-link":"https://commons.wikimedia.org/wiki/File:Airport_2.jpg#/media/File:Airport_2.jpg",
+    "description":"Between 1560 and 1570, Forlani issued four world maps, this version being the most majestic.  As with Forlani’s earlier world maps, this edition is a re-interpretation of Gastaldi, however a significant addition has been made:  a large and extensive southern continent is shown and labeled “Terra Incognita”.  Forlani has populated the unknown southern land mass with imaginary topographical features as well as unlikely animals – among them a camel, an elephant, a lion, a rhinoceros and most outlandish, a griffin and a unicorn."},
+    "geometry":{"type":"Point","coordinates":[3175,5035]}},
+  {"type":"Feature","properties":
+    {"id":5,
+    "chapter":"Nueva Franza",
+    "zoom":6,
+    "image":"img/TrinityCollege.jpg",
+    "source-credit":"Source: Trinity College/edX",
+    "source-link":"https://www.edx.org/sites/default/files/trinity1.jpg",
+    "description":"By 1565, Forlani’s maps of northern North America included the label 'Nueva Franza' to recognize the growing French role in exploring what was still a little-known continent.  Despite Gastaldi pioneering the idea of separate Asian and American continents with the addition of the Strait of Anian in 1562, Forlani disregards this advance.  North America is still shown joined to Asia, but many of the eastern coastal features compare well with modern maps; proof that Forlani was skilled at incorporating the latest knowledge about North America's shape from existing charts and explorers' descriptions.  Florida and Cuba, for example, are quite accurately positioned."},
+    "geometry":{"type":"Point","coordinates":[3300,5000]}},
+  {"type":"Feature","properties":
+      {"id":6,
+      "chapter":"Trinity College, Hartfor",
+      "zoom":6,
+      "image":"img/TrinityCollege.jpg",
+      "source-credit":"Source: Trinity College/edX",
+      "source-link":"https://www.edx.org/sites/default/files/trinity1.jpg",
+      "description":"To learn how to create your own Leaflet storymap from this template, click on 'View code in GitHub' at the bottom of the map, or go to Leaflet Templates section of the Data Visualization For All book, at http://DataVizForAll.org."},
+      "geometry":{"type":"Point","coordinates":[64000,20275]}}
+    ]}

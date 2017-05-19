@@ -1,17 +1,29 @@
 /* global L */
 ;(function (window) {
+  var imageContainerMargin = 70;  // Margin + padding
+
+// This watches for the scrollable container
+  var scrollPosition = 0;
+
+  $('div#contents').scroll(function() {
+    scrollPosition = $(this).scrollTop();
+  });
+
   function init (mapid) {
-    var minZoom = 3
+    var minZoom = 2
     var maxZoom = 8
     var img = [
-      //33600, // original width of image `karta.jpg`
-      //9450  // original height of image
       64000,
       20275
     ]
 
     // create the map
     var map = L.map(mapid, {
+      //added from storymap
+      //center: [0, 0],
+      zoom: 5,
+      //scrollWheelZoom: false,
+      //
       minZoom: minZoom,
       maxZoom: maxZoom
     })
@@ -20,125 +32,113 @@
     var rc = new L.RasterCoords(map, img)
 
     // set the view on a marker ...
-    map.setView(rc.unproject([1589, 1447]), 4)
-
+    //map.setView(rc.unproject([4900, 3015]), 3)
+/*
     // add layer control object
     L.control.layers({}, {
       //'Polygon': layerPolygon(map, rc),
-      'Points of Interest': layerCountries(map, rc),
-      //'Bounds': layerBounds(map, rc, img),
+      //'Points of Interest': layerCountries(map, rc),
+      'Bounds': layerBounds(map, rc, img),
       //'Info': layerGeo(map, rc)
     }).addTo(map)
-
+*/
     // the tile layer containing the image generated with gdal2tiles --leaflet ...
     L.tileLayer('./tiles/{z}/{x}/{y}.png', {
       noWrap: true,
-      attribution: '<a href="<https://www.loc.gov/item/rc01001392/>"Pictorial St. Louis, Library of Congress</a>'
+      attribution: '<a href="<https://www.loc.gov/resource/g3200.mf000070/>"Library of Congress</a>'
     }).addTo(map)
-  }
 
-  /**
-   * layer with markers
-   */
-  function layerBounds (map, rc, img) {
-    // set marker at the image bound edges
-    var layerBounds = L.layerGroup([
-      L.marker(rc.unproject([0, 0])).bindPopup('[0,0]'),
-      L.marker(rc.unproject(img)).bindPopup(JSON.stringify(img))
-    ])
-    map.addLayer(layerBounds)
-
-    // set markers on click events in the map
-    map.on('click', function (event) {
-      // to obtain raster coordinates from the map use `project`
-      var coord = rc.project(event.latlng)
-      // to set a marker, ... in raster coordinates in the map use `unproject`
-      var marker = L.marker(rc.unproject(coord))
-        .addTo(layerBounds)
-      marker.bindPopup('[' + Math.floor(coord.x) + ',' + Math.floor(coord.y) + ']')
-        .openPopup()
-    })
-
-    return layerBounds
-  }
-
-  /**
-   * layer using geoJson data for countries adding a circle marker
-   */
-  function layerCountries (map, rc) {
-    var layerCountries = L.geoJson(window.countries, {
-      // correctly map the geojson coordinates on the image
-      coordsToLatLng: function (coords) {
+  $.getJSON('map.geojson', function(data) {
+  var geojson = L.geoJson(data, {
+    // correctly map the geojson coordinates on the image
+    coordsToLatLng: function (coords) {
         return rc.unproject(coords)
       },
-      // add a popup content to the marker
-      onEachFeature: function (feature, layer) {
-        if (feature.properties && feature.properties.name) {
-          layer.bindPopup(feature.properties.name)
+    onEachFeature: function (feature, layer) {
+      (function(layer, properties) {
+        // This creates numerical icons to match the ID numbers
+        // OR remove the next 6 lines for default blue Leaflet markers
+        var numericMarker = L.ExtraMarkers.icon({
+          icon: 'fa-number',
+          number: feature.properties['id'],
+          markerColor: 'blue'
+        });
+        layer.setIcon(numericMarker);
+
+        // This creates the contents of each chapter from the GeoJSON data. Unwanted items can be removed, and new ones can be added
+        var chapter = $('<p></p>', {
+          text: feature.properties['chapter'],
+          class: 'chapter-header'
+        });
+
+        var image = $('<img>', {
+          src: feature.properties['image'],
+        });
+
+        var source = $('<a>', {
+          text: feature.properties['source-credit'],
+          href: feature.properties['source-link'],
+          target: "_blank",
+          class: 'source'
+        });
+
+        var description = $('<p></p>', {
+          text: feature.properties['description'],
+          class: 'description'
+        });
+
+        var container = $('<div></div>', {
+          id: 'container' + feature.properties['id'],
+          class: 'image-container'
+        });
+
+        var imgHolder = $('<div></div', {
+          class: 'img-holder'
+        });
+
+        imgHolder.append(image);
+
+        container.append(chapter).append(imgHolder).append(source).append(description);
+        $('#contents').append(container);
+
+        var i;
+        var areaTop = -100;
+        var areaBottom = 0;
+
+        // Calculating total height of blocks above active
+        for (i = 1; i < feature.properties['id']; i++) {
+          areaTop += $('div#container' + i).height() + imageContainerMargin;
         }
-      },
-      pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng, {
-          radius: 8,
-          fillColor: '#800080',
-          color: '#D107D1',
-          weight: 1,
-          opacity: 1,
-          fillOpacity: 0.8
-        })
-      }
-    })
-    map.addLayer(layerCountries)
-    return layerCountries
-  }
 
-  /**
-   * layer with red markers
-   */
-  function layerGeo (map, rc) {
-    var imgDir = 'images/'
-    var redMarker = L.icon({
-      iconUrl: imgDir + 'marker-icon-red.png',
-      iconRetinaUrl: imgDir + 'marker-icon-red-2x.png',
-      iconSize: [25, 41],
-      iconAnchor: [12, 41],
-      popupAnchor: [-0, -31],
-      shadowUrl: imgDir + 'marker-shadow.png',
-      shadowSize: [41, 41],
-      shadowAnchor: [14, 41]
-    })
-    var layerGeo = L.geoJson(window.geoInfo, {
-      // correctly map the geojson coordinates on the image
-      coordsToLatLng: function (coords) {
-        return rc.unproject(coords)
-      },
-      // add a popup content to the marker
-      onEachFeature: function (feature, layer) {
-        if (feature.properties && feature.properties.name) {
-          layer.bindPopup(feature.properties.name)
-        }
-      },
-      pointToLayer: function (feature, latlng) {
-        return L.marker(latlng, {
-          icon: redMarker
-        })
-      }
-    })
-    map.addLayer(layerGeo)
-    return layerGeo
-  }
+        areaBottom = areaTop + $('div#container' + feature.properties['id']).height();
 
-  /**
-   * layer drawing a polygon
-*/
-  function layerPolygon (map, rc) {
-    var points = window.polygon.map(function (point) {
-      return rc.unproject([point.x, point.y])
-    })
-    var layerPolygon = L.polygon([points])
-    map.addLayer(layerPolygon)
-    return layerPolygon
-  }
+        $('div#contents').scroll(function() {
+          if ($(this).scrollTop() >= areaTop && $(this).scrollTop() < areaBottom) {
+            $('.image-container').removeClass("inFocus").addClass("outFocus");
+            $('div#container' + feature.properties['id']).addClass("inFocus").removeClass("outFocus");
 
+            map.flyTo(
+              rc.unproject(feature.geometry.coordinates),
+              feature.properties['zoom']
+            );
+            //map.flyTo([feature.geometry.coordinates[1], feature.geometry.coordinates[0] ], feature.properties['zoom']);
+          }
+        });
+
+        // Make markers clickable
+        layer.on('click', function() {
+          $("div#contents").animate({scrollTop: areaTop + "px"});
+        });
+
+      })(layer, feature.properties);
+    }
+  });
+
+  $('div#container1').addClass("inFocus");
+  $('#contents').append("<div class='space-at-the-bottom'><a href='#space-at-the-top'><i class='fa fa-chevron-up'></i></br><small>Top</small></a></div>");
+  map.fitBounds(geojson.getBounds());
+  geojson.addTo(map);
+});
+}
   init('map')
 }(window))

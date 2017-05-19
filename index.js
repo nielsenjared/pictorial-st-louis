@@ -1,6 +1,6 @@
 /* global L */
 ;(function (window) {
-  var imageContainerMargin = 70;  // Margin + padding
+  var imageContainerMargin = 10;  // Margin + padding
 
 // This watches for the scrollable container
   var scrollPosition = 0;
@@ -21,7 +21,7 @@
     var map = L.map(mapid, {
       //added from storymap
       //center: [0, 0],
-      zoom: 5,
+      //zoom: 5,
       //scrollWheelZoom: false,
       //
       minZoom: minZoom,

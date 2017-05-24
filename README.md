@@ -43,16 +43,35 @@ You will need `gdal2tiles.py`. Clone or download:
 
 `git clone https://github.com/commenthol/gdal2tiles-leaflet.git`
 
+You will also need GDAL:
+
+`sudo apt-get python-gdal`
+
 Run the script from within the repo master:
 
 `cd gdal*`
 
-And run:
+And enter:
 
 `python gdal2tiles.py -l -p raster -z 0-8 -w none ../map.png ../tiles`
 
 Voila! Open `index.html` in your best browser (Firefox, of course).
 
+## Credits
+
+* Panoramic Maps of Cities in the United States and Canada, Hebert & Dempsey http://www.worldcat.org/oclc/895319
+* Lucas and Garrison 1875 http://lucasandgarrison.com/homepage/introduction/the-maps/
+* History Happens Here - The Missour History Museum's Blog http://www.historyhappenshere.org/node/7694
+* Views and Viewmakers of Urban America: Lithographs of Towns and Cities in the United States and Canada, John W. Reps http://www.worldcat.org/oclc/463728063
+* Distilled History https://www.distilledhistory.com/
+* City of St. Louis https://www.stlouis-mo.gov/archive/neighborhood-histories-norbury-wayman/bissell/works4.htm
+* Eric Erickson via Ancestry.com http://rootsweb.ancestry.com/~asylums/stlouis_mo/index.html
+* Keen Delage via Flickr https://www.flickr.com/photos/73762611@N00/5992654457
+
+## To Do
+
+* Add text attribution link to index.js & map.geojson
+* Fix accuracy of marker zoom
 ---
 Notes for nielsenjared:
 

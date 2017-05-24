@@ -84,9 +84,9 @@
     {"id":10,
     "chapter":"1019 St. Ange",
     "zoom":8,
-    "image":"img/",
-    "source-credit":"Source: ",
-    "source-link":"",
+    "image":"img/pictorial-st-louis-centennial-1876.png",
+    "source-credit":"Source: Wikimedia",
+    "source-link":"https://commons.wikimedia.org/wiki/File:Centennial_Exhibition,_Opening_Day.jpg",
     "description":"The St. Louis panorama evidently was prepared to show the city’s progress at the United States Centennial celebration of 1876. The verso of each plate contains information on various aspects of St. Louis economic life, including businesses, professions, schools, churches, and governmental organizations. Every building in the area was drawn on the map, and 1,999 specific sites were identified by name. Dry’s map of St. Louis is a magnificent extension of the normal single-sheet lithographic view and one of the crowning achievements of the art. (Reps)"},
     "geometry":{"type":"Point","coordinates":[29850,12350]}},
   {"type":"Feature","properties":
@@ -136,10 +136,10 @@
   {"type":"Feature","properties":
     {"id":16,
     "chapter":"Credits",
-    "zoom":8,
+    "zoom":3,
     "image":"img/pictorial-st-louis-dry-camille-1900.png",
     "source-credit":"Source: Keen Delage via Flickr",
     "source-link":"https://www.flickr.com/photos/73762611@N00/5993213730/",
-    "description":"Panoramic Maps of Cities in the United States and Canada, Hebert & Dempsey http://www.worldcat.org/oclc/895319 \nLucas and Garrison 1875 http://lucasandgarrison.com/homepage/introduction/the-maps/ \nHistory Happens Here - The Missour History Museum's Blog http://www.historyhappenshere.org/node/7694 \nViews and Viewmakers of Urban America: Lithographs of Towns and Cities in the United States and Canada, John W. Reps http://www.worldcat.org/oclc/463728063 \nDistilled History https://www.distilledhistory.com/ \n"},
+    "description":"Created by Jared Nielsen. For source credits, tutorial and more information visit: https://github.com/nielsenjared/pictorial-st-louis"},
     "geometry":{"type":"Point","coordinates":[32000,10137]}}
     ]}

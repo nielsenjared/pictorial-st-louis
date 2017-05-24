@@ -1,6 +1,6 @@
 /* global L */
 ;(function (window) {
-  var imageContainerMargin = 10;  // Margin + padding
+  var imageContainerMargin = 25;  // Margin + padding
 
 // This watches for the scrollable container
   var scrollPosition = 0;

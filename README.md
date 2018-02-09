@@ -45,7 +45,12 @@ You will need `gdal2tiles.py`. Clone or download:
 
 You will also need GDAL:
 
-`sudo apt-get python-gdal`
+```
+sudo add-apt-repository ppa:ubuntugis/ppa
+sudo apt-get update
+sudo apt-get install gdal-bin
+sudo apt-get -y install python-gdal
+```
 
 Run the script from within the repo master:
 

@@ -72,12 +72,3 @@ Voila! Open `index.html` in your best browser (Firefox, of course).
 
 * Add text attribution link to index.js & map.geojson
 * Fix accuracy of marker zoom
----
-Notes for nielsenjared:
-
-| Dim(s)     | Image           | Pixels  |
-| ------------- |:-------------:| -----:|
-| Max W:      | 021   | 6064 |
-| Max H:      | 053   | 4208 |
-| Min W:      | 055   | 5632 |
-| Min H:      | 015   | 3856 |

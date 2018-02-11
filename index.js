@@ -11,7 +11,7 @@
 
   function init (mapid) {
     var minZoom = 2
-    var maxZoom = 8
+    var maxZoom = 7
     var img = [
       64000,
       20275

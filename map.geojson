@@ -29,7 +29,7 @@
   {"type":"Feature","properties":
     {"id":4,
     "chapter":"From the Preface (cont'd)",
-    "zoom":8,
+    "zoom":7,
     "image":"img/pictorial-st-louis-insane-asylum-03.png",
     "source-credit":"Source: Eric Erickson via Ancestry.com",
     "source-link":"http://rootsweb.ancestry.com/~asylums/stlouis_mo/index.html",
@@ -38,7 +38,7 @@
   {"type":"Feature","properties":
     {"id":5,
     "chapter":"From the Preface (cont'd)",
-    "zoom":8,
+    "zoom":7,
     "image":"img/pictorial-st-louis-cemetery.png",
     "source-credit":"Source: Library of Congress",
     "source-link":"https://lccn.loc.gov/2012586260",
@@ -47,7 +47,7 @@
   {"type":"Feature","properties":
     {"id":6,
     "chapter":"From the Preface (cont'd)",
-    "zoom":8,
+    "zoom":7,
     "image":"img/pictorial-st-louis-key.png",
     "source-credit":"Source: Library of Congress",
     "source-link":"https://lccn.loc.gov/rc01001392",
@@ -56,7 +56,7 @@
   {"type":"Feature","properties":
     {"id":7,
     "chapter":"715 Locust",
-    "zoom":8,
+    "zoom":7,
     "image":"img/pictorial-st-louis-dry-camille-1885.png",
     "source-credit":"Source: Keen Delage via Flickr",
     "source-link":"https://www.flickr.com/photos/73762611@N00/5992654457",
@@ -65,7 +65,7 @@
   {"type":"Feature","properties":
     {"id":8,
     "chapter":"1021 Grattan",
-    "zoom":8,
+    "zoom":7,
     "image":"img/pictorial-st-louis-dry-caroline-1871.png",
     "source-credit":"Source: Keen Delage via Flickr",
     "source-link":"https://www.flickr.com/photos/73762611@N00/5990471377/",
@@ -74,7 +74,7 @@
   {"type":"Feature","properties":
     {"id":9,
     "chapter":"1232 Clark",
-    "zoom":8,
+    "zoom":7,
     "image":"img/pictorial-st-louis-anniston.png",
     "source-credit":"Source: Library of Congress",
     "source-link":"https://lccn.loc.gov/75693072",
@@ -83,7 +83,7 @@
   {"type":"Feature","properties":
     {"id":10,
     "chapter":"1019 St. Ange",
-    "zoom":8,
+    "zoom":7,
     "image":"img/pictorial-st-louis-centennial-1876.png",
     "source-credit":"Source: Wikimedia",
     "source-link":"https://commons.wikimedia.org/wiki/File:Centennial_Exhibition,_Opening_Day.jpg",
@@ -101,7 +101,7 @@
   {"type":"Feature","properties":
     {"id":12,
     "chapter":"Social Evil Hospital",
-    "zoom":8,
+    "zoom":7,
     "image":"img/pictorial-st-louis-social-evil-hospital.png",
     "source-credit":"Source: Distilled History",
     "source-link":"https://www.distilledhistory.com/socialevil/",
@@ -110,7 +110,7 @@
   {"type":"Feature","properties":
     {"id":13,
     "chapter":"Grand Water Tower",
-    "zoom":8,
+    "zoom":7,
     "image":"img/pictorial-st-louis-grand-water-tower.png",
     "source-credit":"Source: Distilled History",
     "source-link":"https://www.distilledhistory.com/stlwatertowers/",
@@ -118,7 +118,7 @@
     "geometry":{"type":"Point","coordinates":[56500,5000]}},
   {"type":"Feature","properties":
     {"id":14,"chapter":"Sumner High School",
-    "zoom":8,
+    "zoom":7,
     "image":"img/pictorial-st-louis-sumner-high-school.png",
     "source-credit":"Source: History Happens Here",
     "source-link":"http://www.historyhappenshere.org/node/7782",
@@ -127,7 +127,7 @@
   {"type":"Feature","properties":
     {"id":15,
     "chapter":"3546 Olive",
-    "zoom":8,
+    "zoom":7,
     "image":"img/pictorial-st-louis-dry-son-1872.png",
     "source-credit":"Source: Keen Delage via Flickr",
     "source-link":"https://www.flickr.com/photos/73762611@N00/5990471363",

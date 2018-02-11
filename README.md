@@ -12,6 +12,12 @@ http://jarednielsen.com/pictorial-st-louis/index.html
 
 ## DIY
 
+If you want to build this project at a higher resolution, you can download the  full map here: https://drive.google.com/file/d/1JysC8I4QJfDqoc5svgW54O7qoT4YegqL/view?usp=sharing
+
+Alternatively, you can download the map in slices here: https://drive.google.com/open?id=1dhinYSg_HO-HNXlYGAShZ33chR3YPVYy
+
+Then follow the instructions below for rebuilding the map with ImageMagick, then tiling it with GDAL.
+
 Download or clone this repo.
 
 This approach is a bit ridiculous and convoluted, but it's my quick-and-dirty workaround for the Github file size limit of 100MB (The full .png is ~900MB). You need to stitch together the complete map from the slices included in the `maps` directory and then slice that file into tiles.
